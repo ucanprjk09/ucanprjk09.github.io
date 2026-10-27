@@ -1,1 +1,130 @@
-u
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>UCANPRJK | Developer Portfolio & Catalog</title>
+    <meta name="description" content="Portofolio dan katalog proyek UCANPRJK. Koleksi modul Magisk, shell tools, dan proyek open-source lainnya.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar glass">
+        <div class="nav-container">
+            <a href="#home" class="logo">UCANPRJK</a>
+            <button class="menu-toggle" aria-label="Buka menu navigasi" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#developer">Developer</a></li>
+                <li id="nav-donate-container" class="hidden"><a href="#donate">Donate</a></li>
+                <li id="nav-community-container" class="hidden"><a href="#community">Community</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero reveal">
+            <div class="hero-content">
+                <h1>Selamat Datang di <span class="accent">UCANPRJK</span></h1>
+                <p>Pengembangan modul Magisk, tweak Android, shell tools, dan proyek open-source. Mengoptimalkan performa dan fungsionalitas sistem Anda.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">Lihat Proyek</a>
+                    <a href="https://github.com/ucanprjk09" target="_blank" rel="noopener noreferrer" class="btn btn-outline">GitHub Profil</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper glass">
+                    <img src="assets/images/anime-sticker.png" alt="Maskot UCANPRJK" id="hero-sticker">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="reveal">
+            <div class="section-header">
+                <h2>Tentang UCANPRJK</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="about-content glass card">
+                <p><strong>UCANPRJK</strong> adalah inisiatif pengembangan mandiri dan komunitas yang berfokus pada modifikasi Android, skrip automasi, serta pengembangan perangkat lunak sumber terbuka (open-source).</p>
+                <p>Tujuan utama proyek ini adalah menciptakan solusi ringan, efektif, dan aman bagi pengguna yang ingin mengeksplorasi potensi penuh perangkat mereka melalui modul Magisk, tweak sistem, dan alat berbasis shell.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="reveal">
+            <div class="section-header">
+                <h2>Katalog Proyek & Rilis</h2>
+                <div class="divider"></div>
+            </div>
+            
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="Magisk Module">Magisk Module</button>
+                <button class="filter-btn" data-filter="Shell Tools">Shell Tools</button>
+                <button class="filter-btn" data-filter="Android Tweaks">Android Tweaks</button>
+                <button class="filter-btn" data-filter="Other">Other</button>
+            </div>
+
+            <div id="projects-status" class="status-message">Memuat data rilis dari GitHub...</div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Kartu proyek akan dirender oleh JavaScript -->
+            </div>
+        </section>
+
+        <section id="developer" class="reveal">
+            <div class="section-header">
+                <h2>Developer</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="dev-profile glass card">
+                <h3>UCANPRJK</h3>
+                <p class="role">Main Developer & Maintainer</p>
+                <p class="bio">Pengembang di balik semua modul dan alat yang dirilis di bawah bendera UCANPRJK. Berkomitmen untuk terus menyediakan alat open-source yang bersih dan efisien.</p>
+            </div>
+        </section>
+
+        <section id="donate" class="reveal hidden">
+            <div class="section-header">
+                <h2>Dukung Proyek</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="glass card center-content">
+                <p>Jika proyek dan alat dari UCANPRJK membantu Anda, pertimbangkan untuk memberikan dukungan agar pengembangan dapat terus berlanjut.</p>
+                <a id="donate-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary mt-4">Donasi Sekarang</a>
+            </div>
+        </section>
+
+        <section id="community" class="reveal hidden">
+            <div class="section-header">
+                <h2>Komunitas</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="glass card center-content">
+                <p>Bergabunglah dengan grup dan channel diskusi untuk mendapatkan pembaruan terbaru, bantuan, dan berdiskusi dengan pengguna lainnya.</p>
+                <a id="community-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline mt-4">Bergabung ke Komunitas</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="glass-footer">
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>UCANPRJK</h3>
+                <p>&copy; <span id="current-year"></span> Hak Cipta Dilindungi.</p>
+            </div>
+            <div class="social-links" id="social-links-container">
+                <!-- Ikon Sosial diisi melalui JavaScript -->
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
